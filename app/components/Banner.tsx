@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+
 import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -70,14 +70,26 @@ const Banner = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [prevIndex, setPrevIndex] = useState(0)
+  const [animationIndex, setAnimationIndex] = useState(
+    Math.floor(Math.random() * animationVariants.length)
+  )
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
       setPrevIndex(currentIndex)
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length)
+      setCurrentIndex((prev) => (prev + 1) % slides.length)
+      setAnimationIndex(Math.floor(Math.random() * animationVariants.length)) // 🆕 Randomize animation per slide
     }, 8000)
+
     return () => clearInterval(interval)
-  }, [currentIndex])
+  }, [currentIndex]) // Depend on `currentIndex` to trigger changes
+
+  if (!mounted) return null
 
   return (
     <Parallax className="mt-[90px] relative" strength={300}>
@@ -85,9 +97,7 @@ const Banner = () => {
         {prevIndex !== currentIndex && (
           <motion.div
             key={currentIndex}
-            {...animationVariants[
-              Math.floor(Math.random() * animationVariants.length)
-            ]}
+            {...animationVariants[animationIndex]}
             transition={{ duration: 1, ease: 'easeInOut' }}
             className="absolute inset-0 w-full h-full"
             style={{
@@ -99,13 +109,12 @@ const Banner = () => {
           />
         )}
       </AnimatePresence>
+
       <div className="w-full h-[560px] relative bg-[#838694]/40 flex justify-center items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
-            {...animationVariants[
-              Math.floor(Math.random() * animationVariants.length)
-            ]}
+            {...animationVariants[animationIndex]}
             transition={{ duration: 1, ease: 'easeInOut' }}
             className="absolute w-full h-full flex flex-col items-center justify-center"
           >
@@ -123,6 +132,9 @@ const Banner = () => {
               onClick={() => {
                 setPrevIndex(currentIndex)
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length)
+                setAnimationIndex(
+                  Math.floor(Math.random() * animationVariants.length)
+                ) // 🆕 Randomize animation on click
               }}
             >
               Start A Project
@@ -130,6 +142,7 @@ const Banner = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+
       <div className="absolute bottom-10 flex gap-3 justify-center w-full">
         {slides.map((_, index) => (
           <button
@@ -140,6 +153,9 @@ const Banner = () => {
             onClick={() => {
               setPrevIndex(currentIndex)
               setCurrentIndex(index)
+              setAnimationIndex(
+                Math.floor(Math.random() * animationVariants.length)
+              ) // 🆕 Randomize animation on dot click
             }}
           >
             <span className="sr-only">index</span>
