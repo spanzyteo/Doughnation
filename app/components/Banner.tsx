@@ -84,7 +84,7 @@ const Banner = () => {
       setPrevIndex(currentIndex)
       setCurrentIndex((prev) => (prev + 1) % slides.length)
       setAnimationIndex(Math.floor(Math.random() * animationVariants.length)) // 🆕 Randomize animation per slide
-    }, 8000)
+    }, 6000)
 
     return () => clearInterval(interval)
   }, [currentIndex]) // Depend on `currentIndex` to trigger changes

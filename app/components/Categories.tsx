@@ -13,9 +13,11 @@ const Categories = () => {
           Top Categories
         </h1>
         <h1 className="text-[#D1C8FE] text-lg mt-10 lg:w-[470px] md:w-[520px] sm:w-[362px]">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the when an unknown was popularised.
+          Discover and support innovative projects across various fields.
+          Whether it's groundbreaking technology, creative video content,
+          educational initiatives, life-saving medical advancements, fashion
+          trends, or inspiring design, your donations help bring ideas to life
+          and make a real impact.
         </h1>
       </div>
 

@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Categories from "./components/Categories";
+import FeaturedProjects from "./components/FeaturedProjects";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Navbar />
       <Banner />
       <Categories />
-      <div className="text-red-600">Hello world</div>
+      <FeaturedProjects />
     </>
   )
 }
