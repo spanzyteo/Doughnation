@@ -119,7 +119,7 @@ const Banner = () => {
             className="absolute w-full h-full flex flex-col items-center justify-center"
           >
             <div>
-              <h1 className="text-white md:text-2xl text-lg font-semibold">
+              <h1 className="text-white md:text-2xl text-[16px] lg:font-semibold">
                 {slides[currentIndex].text}
               </h1>
               <div className="w-full border-t border-t-white"></div>

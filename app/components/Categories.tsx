@@ -26,27 +26,27 @@ const Categories = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-8 lg:mt-0">
           <div className="h-[190px] w-full bg-white flex flex-col items-center justify-center gap-3">
             <RiSettings4Line className="h-[60px] w-[60px] text-[#674DF0]" />
-            <h1 className="text-xl">Technology</h1>
+            <h1 className="text-xl text-black">Technology</h1>
           </div>
           <div className="h-[190px] w-full bg-white flex flex-col items-center justify-center gap-3">
             <MdOutlineVideoSettings className="h-[60px] w-[60px] text-[#674DF0]" />
-            <h1 className="text-xl">Videos</h1>
+            <h1 className="text-xl text-black">Videos</h1>
           </div>
           <div className="h-[190px] w-full bg-white flex flex-col items-center justify-center gap-3">
             <PiBookOpenText className="h-[60px] w-[60px] text-[#674DF0]" />
-            <h1 className="text-xl">Education</h1>
+            <h1 className="text-xl text-black">Education</h1>
           </div>
           <div className="h-[190px] w-full bg-white flex flex-col items-center justify-center gap-3">
             <PiStethoscopeBold className="h-[60px] w-[60px] text-[#674DF0]" />
-            <h1 className="text-xl">Medical</h1>
+            <h1 className="text-xl text-black">Medical</h1>
           </div>
           <div className="h-[190px] w-full bg-white flex flex-col items-center justify-center gap-3">
             <GiClothes className="h-[60px] w-[60px] text-[#674DF0]" />
-            <h1 className="text-xl">Fashion</h1>
+            <h1 className="text-xl text-black">Fashion</h1>
           </div>
           <div className="h-[190px] w-full bg-white flex flex-col items-center justify-center gap-3">
             <CgIfDesign className="h-[60px] w-[60px] text-[#674DF0]" />
-            <h1 className="text-xl">Design</h1>
+            <h1 className="text-xl text-black">Design</h1>
           </div>
         </div>
       </div>

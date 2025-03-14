@@ -11,8 +11,8 @@ const Navbar = () => {
   }
   return (
     <div className="h-[90px] flex items-center justify-between fixed top-0 right-0 left-0 px-8 lg:px-20 bg-white z-10">
-      <BiMenuAltLeft className='block lg:hidden h-[30px] w-[30px]' onClick={() => handleOPenSidebar()}/>
-      <h1 className="font-semibold lg:text-xl text-sm">DOUGHNATION</h1>
+      <BiMenuAltLeft className='block lg:hidden h-[30px] w-[30px] text-black' onClick={() => handleOPenSidebar()}/>
+      <h1 className="font-semibold lg:text-xl text-sm text-black">DOUGHNATION</h1>
       <div className="lg:flex hidden gap-10 items-center">
         <h1>Home</h1>
         <h1>About</h1>

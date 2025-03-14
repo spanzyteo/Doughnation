@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1))
-    }, 3000) // Change image every 3 seconds
+    }, 8000) // Change image every 3 seconds
 
     return () => clearInterval(interval)
   }, [maxIndex])
@@ -68,10 +68,10 @@ const FeaturedProjects = () => {
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgb(27,31,46)] to-transparent"></div>
-              <div className="absolute top-16 flex flex-col w-full h-full group-hover:bg-white transition-all duration-500 ease-in-out">
-                <div className="w-[90%] absolute left-6 mt-10">
+              <div className="absolute lg:top-16 top-10 flex flex-col w-full h-full group-hover:bg-white transition-all duration-500 ease-in-out">
+                <div className="w-[89%] absolute left-4 mt-10">
                   <div className="flex items-center">
-                    <button className="bg-[#674DF0] text-white px-4 py-1 uppercase text-[11px] cursor-pointer font-thin">
+                    <button className="bg-[#674DF0] text-white px-4 py-1 uppercase text-[11px] cursor-pointer">
                       {item.category}
                     </button>
                     <div className="flex items-center">
@@ -81,7 +81,7 @@ const FeaturedProjects = () => {
                       </h1>
                     </div>
                   </div>
-                  <h1 className="text-white font-bold text-2xl mt-6 w-[270px] group-hover:text-black">
+                  <h1 className="text-white font-bold text-2xl lg:mt-6 mt-4 w-[270px] group-hover:text-black">
                     {item.title}
                   </h1>
                   <div className="flex mt-3 items-center justify-between">
