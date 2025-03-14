@@ -1,6 +1,7 @@
 'use client'
 import { ImCancelCircle } from 'react-icons/im'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { closeSidebar } from '../store/sidebarSlice'
 
@@ -12,10 +13,34 @@ const Sidebar = () => {
     dispatch(closeSidebar())
   }
 
+  // Prevent scrolling when sidebar is open
+  useEffect(() => {
+    if (sidebar) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [sidebar])
+
   return (
     <AnimatePresence>
       {sidebar && (
         <>
+          {/* Overlay to close sidebar when clicked */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 left-0 w-full h-full bg-black z-10 lg:hidden"
+            onClick={handleCloseSidebar} // Clicking outside closes the sidebar
+          ></motion.div>
+
+          {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
@@ -33,6 +58,7 @@ const Sidebar = () => {
             <div className="mt-4 border-t border-t-gray-300 w-full"></div>
           </motion.div>
 
+          {/* Close button */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -42,7 +68,7 @@ const Sidebar = () => {
           >
             <ImCancelCircle
               onClick={handleCloseSidebar}
-              className="h-[25px] w-[25px] cursor-pointer text-black"
+              className="h-[25px] w-[25px] cursor-pointer"
             />
           </motion.div>
         </>

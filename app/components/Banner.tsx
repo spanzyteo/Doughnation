@@ -124,7 +124,7 @@ const Banner = () => {
               </h1>
               <div className="w-full border-t border-t-white"></div>
             </div>
-            <h1 className="text-white font-bold md:text-7xl text-4xl mt-8 text-center">
+            <h1 className="text-white font-bold md:text-7xl text-3xl mt-8 text-center">
               {slides[currentIndex].text1}
             </h1>
             <button
