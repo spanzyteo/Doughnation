@@ -68,7 +68,7 @@ const Sidebar = () => {
           >
             <ImCancelCircle
               onClick={handleCloseSidebar}
-              className="h-[25px] w-[25px] cursor-pointer"
+              className="h-[25px] w-[25px] cursor-pointer text-black"
             />
           </motion.div>
         </>
