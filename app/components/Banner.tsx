@@ -129,13 +129,13 @@ const Banner = () => {
             </h1>
             <button
               className="uppercase mt-8 bg-[#674DF0] px-9 py-5 text-white hover:bg-black cursor-pointer transition-all duration-500 ease-in-out"
-              onClick={() => {
-                setPrevIndex(currentIndex)
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length)
-                setAnimationIndex(
-                  Math.floor(Math.random() * animationVariants.length)
-                ) // 🆕 Randomize animation on click
-              }}
+              // onClick={() => {
+              //   setPrevIndex(currentIndex)
+              //   setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length)
+              //   setAnimationIndex(
+              //     Math.floor(Math.random() * animationVariants.length)
+              //   )
+              // }}
             >
               Start A Project
             </button>
