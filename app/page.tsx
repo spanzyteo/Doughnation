@@ -5,6 +5,7 @@ import FeaturedProjects from "./components/FeaturedProjects";
 import Sidebar from "./components/Sidebar";
 import CreativitySection from "./components/CreativitySection";
 import Partners from "./components/Partners";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <FeaturedProjects />
       <CreativitySection />
       <Partners />
+      <Testimonials />
     </div>
   )
 }
