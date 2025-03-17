@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import CreativitySection from "./components/CreativitySection";
 import Partners from "./components/Partners";
 import Testimonials from "./components/Testimonials";
+import TeamMembers from "./components/TeamMembers";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <CreativitySection />
       <Partners />
       <Testimonials />
+      <TeamMembers />
     </div>
   )
 }
