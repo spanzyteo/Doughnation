@@ -16,7 +16,7 @@ const TeamMembers = () => {
           <div className="bg-[#29F0B4] h-[10px] w-[10px]"></div>
           <h1 className="text-xl text-white">Meet Our Team Members</h1>
         </div>
-        <h1 className="lg:text-6xl text-4xl font-bold mt-6 text-white">
+        <h1 className="lg:text-6xl text-3xl font-bold mt-6 text-white">
           Experienced People
         </h1>
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 sm:px-0">
