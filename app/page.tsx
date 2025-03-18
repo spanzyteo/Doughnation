@@ -7,6 +7,7 @@ import CreativitySection from "./components/CreativitySection";
 import Partners from "./components/Partners";
 import Testimonials from "./components/Testimonials";
 import TeamMembers from "./components/TeamMembers";
+import ContactAndFooter from "./components/ContactAndFooter";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Partners />
       <Testimonials />
       <TeamMembers />
+      <ContactAndFooter />
     </div>
   )
 }

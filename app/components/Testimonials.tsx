@@ -56,7 +56,7 @@ const Testimonials = () => {
                   alt="image"
                   width={370}
                   height={417}
-                  className="w-[282px] sm:w-[370px] md:max-w-[445px] h-[417px] object-cover mt-8"
+                  className="w-[282px] sm:w-[370px] md:max-w-[445px] sm:h-[417px] h-[280px] object-cover mt-8"
                 />
               </div>
             </div>
