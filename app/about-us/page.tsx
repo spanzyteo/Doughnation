@@ -1,6 +1,7 @@
+'use client'
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io'
 import KnowDoughnation from '../components/KnowDoughnation'
-import DoughnationRecords from '../components/DoughnationRecords'
+import DoughnationRecords from '../components/Doughnation_Records/DoughnationRecords'
 
 const AboutUs = () => {
   return (
