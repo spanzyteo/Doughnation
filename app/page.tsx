@@ -1,19 +1,14 @@
-import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Categories from "./components/Categories";
 import FeaturedProjects from "./components/FeaturedProjects";
-import Sidebar from "./components/Sidebar";
 import CreativitySection from "./components/CreativitySection";
 import Partners from "./components/Partners";
 import Testimonials from "./components/Testimonials";
 import TeamMembers from "./components/TeamMembers";
-import ContactAndFooter from "./components/ContactAndFooter";
 
 export default function Home() {
   return (
     <div className="relative">
-      <Navbar />
-      <Sidebar />
       <Banner />
       <Categories />
       <FeaturedProjects />
@@ -21,7 +16,6 @@ export default function Home() {
       <Partners />
       <Testimonials />
       <TeamMembers />
-      <ContactAndFooter />
     </div>
   )
 }
