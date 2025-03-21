@@ -2,6 +2,9 @@
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io'
 import KnowDoughnation from '../components/KnowDoughnation'
 import DoughnationRecords from '../components/Doughnation_Records/DoughnationRecords'
+import AboutTeamMembers from '../components/AboutTeamMembers'
+import CreativitySection from '../components/CreativitySection'
+import Testimonials from '../components/Testimonials'
 
 const AboutUs = () => {
   return (
@@ -68,6 +71,9 @@ const AboutUs = () => {
       </div>
       <DoughnationRecords />
       <KnowDoughnation />
+      <AboutTeamMembers />
+      <CreativitySection />
+      <Testimonials />
     </div>
   )
 }
