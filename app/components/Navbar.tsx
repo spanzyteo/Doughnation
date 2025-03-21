@@ -11,7 +11,7 @@ const Navbar = () => {
     dispatch(openSidebar())
   }
   return (
-    <div className="h-[90px] flex items-center justify-between fixed top-0 right-0 left-0 px-8 lg:px-20 bg-white z-50">
+    <div className="h-[90px] flex items-center justify-between fixed top-0 right-0 left-0 px-8 lg:px-20 bg-white z-15">
       <BiMenuAltLeft
         className="block lg:hidden h-[30px] w-[30px] text-black"
         onClick={() => handleOPenSidebar()}

@@ -37,7 +37,7 @@ const Sidebar = () => {
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 w-full h-full bg-black z-100 lg:hidden"
+            className="fixed top-0 left-0 w-full h-full bg-black z-10 lg:hidden"
             onClick={handleCloseSidebar} // Clicking outside closes the sidebar
           ></motion.div>
 
