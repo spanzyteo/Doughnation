@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link href={'/about-us'} className="text-[#838694] text-lg">
           About
         </Link>
-        <Link href={'/contact'} className="text-[#838694] text-lg">
+        <Link href={'/contact-us'} className="text-[#838694] text-lg">
           Contact
         </Link>
         <Link href={'/projects'} className="text-[#838694] text-lg">

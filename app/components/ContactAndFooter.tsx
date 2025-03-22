@@ -53,7 +53,7 @@ const ContactAndFooter = () => {
             >
               News & Articles
             </Link>
-            <Link href={'/contact'} className="text-[#8d91a2] text-[17px]">
+            <Link href={'/contact-us'} className="text-[#8d91a2] text-[17px]">
               Contact Us
             </Link>
           </div>
