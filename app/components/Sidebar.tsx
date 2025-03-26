@@ -74,7 +74,7 @@ const Sidebar = () => {
             </Link>
             <div className="mt-4 border-t border-t-gray-300 w-full"></div>
             <Link
-              href={'/project'}
+              href={'/projects'}
               onClick={() => handleCloseSidebar()}
               className="text-gray-700 mt-4"
             >
