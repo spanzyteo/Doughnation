@@ -9,7 +9,7 @@ import { FaLocationDot } from 'react-icons/fa6'
 
 const ContactAndFooter = () => {
   return (
-    <div className="bg-[url('/bg-footer.png')] bg-cover bg-center bg-[#1B1F2E] mt-[8rem] flex flex-col xl:px-24 lg:px-28 px-5">
+    <div className="bg-[url('/bg-footer.png')] bg-cover bg-center bg-[#1B1F2E] mt-[8rem flex flex-col xl:px-24 lg:px-28 px-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 mt-32 gap-16">
         <div className="flex flex-col gap-8">
           <h1 className="text-white font-bold text-4xl">Doughnation</h1>

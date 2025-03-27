@@ -74,6 +74,7 @@ const AboutUs = () => {
       <AboutTeamMembers />
       <CreativitySection />
       <Testimonials />
+      <div className='mt-[4rem]'></div>
     </div>
   )
 }

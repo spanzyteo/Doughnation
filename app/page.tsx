@@ -16,6 +16,7 @@ export default function Home() {
       <Partners />
       <Testimonials />
       <TeamMembers />
+      <div className="mt-[4rem]"></div>
     </div>
   )
 }

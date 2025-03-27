@@ -1,4 +1,7 @@
 'use client'
+import CreativitySection from '../components/CreativitySection'
+import DoughnationRecords from '../components/Doughnation_Records/DoughnationRecords'
+import FeaturedProjects from '../components/FeaturedProjects'
 import ProjectCategory from '../components/ProjectCategory'
 
 const Projects = () => {
@@ -30,6 +33,8 @@ const Projects = () => {
         </div>
         <ProjectCategory />
       </div>
+      <FeaturedProjects />
+      <CreativitySection />
     </div>
   )
 }
