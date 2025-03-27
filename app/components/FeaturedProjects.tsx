@@ -82,7 +82,7 @@ const FeaturedProjects = () => {
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgb(27,31,46)] to-transparent"></div>
-              <div className="absolute xl:top-[20%] lg:top-[6%] md:top-[23%] sm:top-[50%] top-[25%] flex flex-col w-full h-full group-hover:bg-white transition-all duration-500 ease-in-out">
+              <div className="absolute bottom-0 h-[230px] left-0 right-0 pb-6 group-hover:bg-white transition-all duration-500 ease-in-out">
                 <div className="w-[89%] absolute left-4 mt-10">
                   <div className="flex items-center">
                     <button className="bg-[#674DF0] text-white px-4 py-1 uppercase text-[11px] cursor-pointer">
@@ -105,7 +105,7 @@ const FeaturedProjects = () => {
                         ₦{item.fundsToRaise.toLocaleString()}
                       </span>
                     </h1>
-                    <h1 className="text-white text-[13px]">
+                    <h1 className="text-white text-[13px] group-hover:text-gray-500">
                       {(item.fundsRaised / item.fundsToRaise) * 100}%
                     </h1>
                   </div>
