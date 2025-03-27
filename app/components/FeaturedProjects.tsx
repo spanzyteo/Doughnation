@@ -82,7 +82,7 @@ const FeaturedProjects = () => {
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgb(27,31,46)] to-transparent"></div>
-              <div className="absolute bottom-0 h-[230px] left-0 right-0 pb-6 group-hover:bg-white transition-all duration-500 ease-in-out">
+              <div className="absolute bottom-0 xl:h-[230px] h-[210px] left-0 right-0 lg:pb-6 pb-4 group-hover:bg-white transition-all duration-500 ease-in-out">
                 <div className="w-[89%] absolute left-4 mt-10">
                   <div className="flex items-center">
                     <button className="bg-[#674DF0] text-white px-4 py-1 uppercase text-[11px] cursor-pointer">
