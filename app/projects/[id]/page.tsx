@@ -25,7 +25,7 @@ const ProjectTitle = () => {
           alt="background"
           className="max-h-[338px] w-full"
         />
-        <h1 className="absolute top-1/2 lg:left-24 left-6 font-bold text-white text-2xl md:text-5xl">
+        <h1 className="absolute top-8 lg:left-24 left-6 font-bold text-white text-2xl md:text-5xl">
           {selectedProject?.title}
         </h1>
       </div>
@@ -102,7 +102,7 @@ const ProjectTitle = () => {
               ></div>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <h1
               onClick={() => setDonateAmount(50000)}
               className="bg-white px-4 py-2 font-medium cursor-pointer"
