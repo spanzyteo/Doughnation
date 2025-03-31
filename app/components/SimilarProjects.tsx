@@ -1,12 +1,28 @@
 'use client'
-import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
-import { projects } from '../utils/projects'
-import { motion } from 'framer-motion'
-import { AiOutlineClockCircle } from 'react-icons/ai'
 import Link from 'next/link'
+import React, { useEffect, useRef, useState } from 'react'
+import { AiOutlineClockCircle } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
-const FeaturedProjects = () => {
+
+interface Project {
+  id: number
+  image: string
+  category: string
+  days: number
+  title: string
+  fundsRaised: number
+  fundsToRaise: number
+}
+
+interface SimilarProjectsProps {
+  similarProjects: Project[]
+}
+
+const SimilarProjects: React.FC<SimilarProjectsProps> = ({
+  similarProjects,
+}) => {
   const [itemsToShow, setItemsToShow] = useState(3)
   const [startIndex, setStartIndex] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -32,7 +48,7 @@ const FeaturedProjects = () => {
     }
   }, [])
 
-  const maxIndex = projects.length - itemsToShow
+  const maxIndex = similarProjects.length - itemsToShow
   const itemWidth = containerRef.current
     ? (containerRef.current.offsetWidth - (itemsToShow - 1) * gap) / itemsToShow
     : 0
@@ -52,10 +68,9 @@ const FeaturedProjects = () => {
         Businesses You Can Back
       </h1>
       <h1 className="font-bold text-center md:text-6xl text-4xl mt-6">
-        Featured Projects
+        Similar Projects
       </h1>
 
-      {/* Project Container */}
       <div
         ref={containerRef}
         className="overflow-hidden w-[90%] flex mt-16 mx-auto xl:w-[1200px]"
@@ -64,15 +79,16 @@ const FeaturedProjects = () => {
           className="flex flex-nowrap"
           animate={{ x: `-${startIndex * (itemWidth + gap)}px` }} // Moves by exact item width + gap
           transition={{ duration: 0.6, ease: 'easeInOut' }}
-          style={{ width: projects.length * (itemWidth + gap) }}
+          style={{ width: similarProjects.length * (itemWidth + gap) }}
         >
-          {projects.map((item, index) => (
+          {similarProjects.map((item, index) => (
             <div
               key={item.id}
               className="flex-shrink-0 aspect-[4/3] relative cursor-pointer group"
               style={{
                 width: `${itemWidth}px`,
-                marginRight: index !== projects.length - 1 ? `${gap}px` : '0px',
+                marginRight:
+                  index !== similarProjects.length - 1 ? `${gap}px` : '0px',
               }}
             >
               <Image
@@ -96,7 +112,10 @@ const FeaturedProjects = () => {
                       </h1>
                     </div>
                   </div>
-                  <Link href={`/projects/${item.id}`} className="text-white font-bold xl:text-2xl lg:text-xl md:text-lg text-xl lg:mt-6 mt-4 max-w-[260px] group-hover:text-black hover:text-[#674DF0]">
+                  <Link
+                    href={`/projects/${item.id}`}
+                    className="text-white font-bold xl:text-2xl lg:text-xl md:text-lg text-xl lg:mt-6 mt-4 max-w-[260px] group-hover:text-black hover:text-[#674DF0]"
+                  >
                     {item.title}
                   </Link>
                   <div className="flex mt-3 items-center justify-between">
@@ -130,4 +149,4 @@ const FeaturedProjects = () => {
   )
 }
 
-export default FeaturedProjects
+export default SimilarProjects

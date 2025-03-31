@@ -6,6 +6,7 @@ export interface ProjectsData {
   fundsToRaise: number
   fundsRaised: number
   image: string
+  backers: number
 }
 
 export const projects: ProjectsData[] = [
@@ -17,6 +18,7 @@ export const projects: ProjectsData[] = [
     fundsToRaise: 2000000,
     fundsRaised: 400000,
     image: '/project-1.jpg',
+    backers: 5
   },
   {
     id: 1,
@@ -26,6 +28,7 @@ export const projects: ProjectsData[] = [
     fundsToRaise: 1000000,
     fundsRaised: 200000,
     image: '/project-2.jpg',
+    backers: 3
   },
   {
     id: 2,
@@ -35,6 +38,7 @@ export const projects: ProjectsData[] = [
     fundsToRaise: 4000000,
     fundsRaised: 700000,
     image: '/project-3.jpg',
+    backers: 6
   },
   {
     id: 3,
@@ -44,5 +48,16 @@ export const projects: ProjectsData[] = [
     fundsToRaise: 6000000,
     fundsRaised: 300000,
     image: '/project-4.jpg',
+    backers: 7
   },
+  {
+    id: 4,
+    category: 'Technology',
+    days: 1184,
+    title: 'Mirror one | Your life at a glance',
+    fundsToRaise: 8000000000,
+    fundsRaised: 530000000,
+    image: '/project-5.jpg',
+    backers: 23
+  }
 ]
