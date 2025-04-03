@@ -4,14 +4,31 @@ import { projects } from '@/app/utils/projects'
 import { useState } from 'react'
 import Link from 'next/link'
 import SimilarProjects from '@/app/components/SimilarProjects'
+import { useAppDispatch, useAppSelector } from '@/app/store/hooks'
+import { donateFifty, donateHundred, donateOneFifty } from '@/app/store/donateSlice'
 
 const ProjectTitle = () => {
   const params = useParams()
   const projectId = params.id
 
-  const [donateAmount, setDonateAmount] = useState(50000)
+  // const [donateAmount, setDonateAmount] = useState(50000)
+  const donateAmount = useAppSelector((state) => state.donate.donateAmount)
 
-  const selectedProject = projects.find((item) => item.id === Number(projectId))
+  const dispatch = useAppDispatch()
+
+  const handleFifty = () => {
+    dispatch(donateFifty())
+  } 
+  
+  const handleHundred = () => {
+    dispatch(donateHundred())
+  } 
+  
+  const handleOneFifty = () => {
+    dispatch(donateOneFifty())
+  }
+
+  const selectedProject: any = projects.find((item) => item.id === Number(projectId))
 
   const similarProjects = projects.filter(
     (item) => item.id !== Number(projectId)
@@ -25,7 +42,7 @@ const ProjectTitle = () => {
           alt="background"
           className="max-h-[338px] w-full"
         />
-        <h1 className="absolute top-8 lg:left-24 left-6 font-bold text-white text-2xl md:text-5xl">
+        <h1 className="absolute top-8 lg:top-1/2 lg:left-24 left-6 font-bold text-white text-2xl md:text-5xl">
           {selectedProject?.title}
         </h1>
       </div>
@@ -37,7 +54,7 @@ const ProjectTitle = () => {
             className="object-cover lg:h-[600px]"
           />
           <h1 className="font-bold text-4xl">Short Story</h1>
-          <h1 className="text-[18px] text-[#838694] leading-[33px] font-medium">
+          <h1 className="text-[18px] text-primary leading-[33px] font-medium">
             Excepteur sint occaecat cupidatat non proident sunt in culpa qui
             deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
             iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -45,7 +62,7 @@ const ProjectTitle = () => {
           </h1>
         </div>
         <div className="flex flex-col gap-8 items-start">
-          <button className="bg-[#674DF0] text-white px-4 py-1 uppercase text-[16px] cursor-pointer">
+          <button className="bg-secondary text-white px-4 py-1 uppercase text-[16px] cursor-pointer">
             {selectedProject?.category}
           </button>
           <h1 className="lg:text-4xl text-3xl font-bold max-w-[500px] leading-[40px]">
@@ -53,32 +70,32 @@ const ProjectTitle = () => {
           </h1>
           <div className="flex md:flex-row flex-col items-center gap-4 justify-between w-full">
             <div className="bg-white px-[15px] py-[35px] flex flex-col gap-4 items-center w-full">
-              <h1 className="text-[24px] text-[#674DF0]">
+              <h1 className="text-[24px] text-secondary">
                 ₦{selectedProject?.fundsRaised.toLocaleString()}
               </h1>
-              <h1 className="text-[17px] text-[#838694]">Raised</h1>
+              <h1 className="text-[17px] text-primary">Raised</h1>
             </div>
             <div className="bg-white px-[15px] py-[35px] flex flex-col gap-4 items-center w-full">
-              <h1 className="text-[24px] text-[#674DF0]">
+              <h1 className="text-[24px] text-secondary">
                 {selectedProject?.backers}
               </h1>
-              <h1 className="text-[17px] text-[#838694]">Backers</h1>
+              <h1 className="text-[17px] text-primary">Backers</h1>
             </div>
             <div className="bg-white px-[15px] py-[35px] flex flex-col gap-4 items-center w-full">
-              <h1 className="text-[24px] text-[#674DF0]">
+              <h1 className="text-[24px] text-secondary">
                 {selectedProject?.days}
               </h1>
-              <h1 className="text-[17px] text-[#838694] whitespace-nowrap">
+              <h1 className="text-[17px] text-primary whitespace-nowrap">
                 Days Left
               </h1>
             </div>
           </div>
           <div className="flex flex-col w-full">
             <div className="flex w-full justify-between items-center">
-              <h1 className="font-medium text-[#838694] leading-[29px]">
+              <h1 className="font-medium text-primary leading-[29px]">
                 Raised:
               </h1>
-              <h1 className="font-medium text-[#838694] leading-[29px]">
+              <h1 className="font-medium text-primary leading-[29px]">
                 {selectedProject
                   ? ((selectedProject.fundsRaised ?? 0) /
                       (selectedProject.fundsToRaise ?? 1)) *
@@ -104,19 +121,19 @@ const ProjectTitle = () => {
           </div>
           <div className="flex items-center gap-2">
             <h1
-              onClick={() => setDonateAmount(50000)}
+              onClick={() => handleFifty()}
               className="bg-white px-4 py-2 font-medium cursor-pointer"
             >
               ₦50,000
             </h1>
             <h1
-              onClick={() => setDonateAmount(100000)}
+              onClick={() => handleHundred()}
               className="bg-white px-4 py-2 font-medium cursor-pointer"
             >
               ₦100,000
             </h1>
             <h1
-              onClick={() => setDonateAmount(150000)}
+              onClick={() => handleOneFifty()}
               className="bg-white px-4 py-2 font-medium cursor-pointer"
             >
               ₦150,000
@@ -131,8 +148,8 @@ const ProjectTitle = () => {
               className="bg-white border border-[#E9E9EE] w-[120px] px-4 py-2 focus:outline-none"
             />
             <Link
-              href={'/donate'}
-              className="py-2 px-6 bg-[#674DF0] text-white font-medium relative hover:bg-[#29F0B4] transition-all duration-500 ease-in-out"
+              href={`/projects/${selectedProject.id}/donate`}
+              className="py-2 px-6 bg-secondary text-white font-medium relative hover:bg-tertiary transition-all duration-500 ease-in-out"
             >
               Donate
               <div className="absolute top-0 right-0 h-[10px] w-[10px] bg-black"></div>

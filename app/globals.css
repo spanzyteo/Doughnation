@@ -6,3 +6,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+@theme {
+  --color-primary: #838694;
+  --color-secondary: #674DF0;
+  --color-tertiary: #29F0B4;
+}
