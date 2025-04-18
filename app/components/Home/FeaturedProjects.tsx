@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
-import { projects } from '../utils/projects'
+import { projects } from '@/app/utils/projects'
 import { motion } from 'framer-motion'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import Link from 'next/link'

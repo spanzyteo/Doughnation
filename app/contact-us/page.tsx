@@ -1,5 +1,5 @@
 'use client'
-import ContactDetails from "../components/ContactDetails"
+import ContactDetails from "./components/ContactDetails"
 
 const ContactUs = () => {
   return (
@@ -10,7 +10,7 @@ const ContactUs = () => {
           alt="background"
           className="max-h-[338px] w-full"
         />
-        <h1 className="absolute top-1/2 left-24 font-bold text-white text-2xl md:text-5xl">
+        <h1 className="absolute top-8 lg:top-1/2 lg:left-24 left-6 font-bold text-white text-2xl md:text-5xl">
           Contact Us
         </h1>
       </div>
@@ -20,14 +20,14 @@ const ContactUs = () => {
             <div className="bg-[#29F0B4] h-[10px] w-[10px]"></div>
             <h1 className="text-xl text-[#674DF0]">Contact Us Now</h1>
           </div>
-          <h1 className="mt-6 font-bold lg:text-6xl md:text-4xl text-3xl w-auto">
+          <h1 className="mt-6 font-bold lg:text-6xl md:text-4xl text-2xl w-auto leading-[73px]">
             Write Us a Message
           </h1>
-          <h1 className="mt-6 leading-[33px] max-w-[800px] text-[#838694] text-[17px]">
+          <p className="mt-6 leading-[33px] max-w-[800px] text-[#838694]">
             There are many variations of passages of available but the majority
             have in some form, by injected humou or words which don’t look even
             slightly believable.
-          </h1>
+          </p>
         </div>
         <div className="flex flex-col gap-8 w-full">
           <div className="flex sm:flex-row flex-col gap-8">

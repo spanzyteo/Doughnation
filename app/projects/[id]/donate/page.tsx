@@ -1,6 +1,6 @@
 'use client'
-import YourDonation from '../../component/YourDonation'
-import BillingSection from '../../component/BillingSection'
+import YourDonation from '../../components/YourDonation'
+import BillingSection from '../../components/BillingSection'
 
 const DonatePage = () => {
 

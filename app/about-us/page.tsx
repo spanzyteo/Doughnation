@@ -3,8 +3,8 @@ import { IoMdCheckmarkCircleOutline } from 'react-icons/io'
 import KnowDoughnation from '../components/KnowDoughnation'
 import DoughnationRecords from '../components/Doughnation_Records/DoughnationRecords'
 import AboutTeamMembers from '../components/AboutTeamMembers'
-import CreativitySection from '../components/CreativitySection'
-import Testimonials from '../components/Testimonials'
+import CreativitySection from '../components/Home/CreativitySection'
+import Testimonials from '../components/Home/Testimonials'
 
 const AboutUs = () => {
   return (
@@ -15,7 +15,7 @@ const AboutUs = () => {
           alt="background"
           className="max-h-[338px] w-full"
         />
-        <h1 className="absolute top-1/2 left-24 font-bold text-white text-2xl md:text-5xl">
+        <h1 className="absolute top-8 lg:top-1/2 lg:left-24 left-6 font-bold text-white text-2xl md:text-5xl">
           About Us
         </h1>
       </div>
@@ -74,7 +74,7 @@ const AboutUs = () => {
       <AboutTeamMembers />
       <CreativitySection />
       <Testimonials />
-      <div className='mt-[4rem]'></div>
+      <div className="mt-[4rem]"></div>
     </div>
   )
 }

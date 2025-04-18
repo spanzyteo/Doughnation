@@ -1,10 +1,10 @@
-import Banner from "./components/Banner";
-import Categories from "./components/Categories";
-import FeaturedProjects from "./components/FeaturedProjects";
-import CreativitySection from "./components/CreativitySection";
-import Partners from "./components/Partners";
-import Testimonials from "./components/Testimonials";
-import TeamMembers from "./components/TeamMembers";
+import Banner from './components/Home/Banner'
+import Categories from './components/Home/Categories'
+import FeaturedProjects from './components/Home/FeaturedProjects'
+import CreativitySection from './components/Home/CreativitySection'
+import Partners from './components/Home/Partners'
+import Testimonials from './components/Home/Testimonials'
+import TeamMembers from './components/Home/TeamMembers'
 
 export default function Home() {
   return (

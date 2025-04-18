@@ -1,7 +1,7 @@
 'use client'
-import CreativitySection from '../components/CreativitySection'
+import CreativitySection from '../components/Home/CreativitySection'
 import DoughnationRecords from '../components/Doughnation_Records/DoughnationRecords'
-import FeaturedProjects from '../components/FeaturedProjects'
+import FeaturedProjects from '../components/Home/FeaturedProjects'
 import ProjectCategory from '../components/ProjectCategory'
 
 const Projects = () => {
@@ -13,7 +13,7 @@ const Projects = () => {
           alt="background"
           className="max-h-[338px] w-full"
         />
-        <h1 className="absolute top-1/2 left-24 font-bold text-white text-2xl md:text-5xl">
+        <h1 className="absolute top-8 lg:top-1/2 lg:left-24 left-6 font-bold text-white text-2xl md:text-5xl">
           Projects
         </h1>
       </div>

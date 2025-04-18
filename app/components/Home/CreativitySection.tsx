@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { Parallax } from 'react-parallax'
 
 const CreativitySection = () => {
@@ -21,9 +22,9 @@ const CreativitySection = () => {
           <h1 className="text-4xl lg:text-6xl font-bold mt-8 text-white text-center lg:w-[900px] lg:leading-[5rem] leading-[3rem]">
             Together We can Bring More Creativity into the World
           </h1>
-          <button className="uppercase mt-16 bg-[#29F0B4] px-9 py-5 text-white hover:bg-black cursor-pointer transition-all duration-500 ease-in-out">
+          <Link href={'/add-project'} className="uppercase mt-16 bg-[#29F0B4] px-9 py-5 text-white hover:bg-black cursor-pointer transition-all duration-500 ease-in-out">
             START A PROJECT
-          </button>
+          </Link>
         </div>
       </Parallax>
     </>

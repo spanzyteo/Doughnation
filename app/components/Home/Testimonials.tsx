@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { reviews } from '../utils/reviews'
+import { reviews } from '../../utils/reviews'
 import Image from 'next/image'
 
 const Testimonials = () => {
@@ -42,7 +42,7 @@ const Testimonials = () => {
               key={item.id}
               className="w-full flex-shrink-0 lg:flex-row flex-col bg-[#F7F7F9] border-l-4 border-l-[#29F0B4] px-5 lg:px-16 gap-8 overflow-auto lg:gap-0 pb-6"
             >
-              <div className='flex lg:flex-row flex-col justify-between'>
+              <div className="flex lg:flex-row flex-col justify-between">
                 <div className="flex flex-col mt-8 lg:mt-16">
                   <h1 className="text-[#674DF0] font-bold text-3xl">
                     {item.name}
