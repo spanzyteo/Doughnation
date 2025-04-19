@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 const animationVariants = [
   {
@@ -150,9 +151,9 @@ const Banner = () => {
                 <h1 className="text-white font-bold md:text-7xl text-3xl mt-8 text-center">
                   {slides[currentIndex].text1}
                 </h1>
-                <button className="uppercase mt-8 bg-[#674DF0] px-9 py-5 text-white hover:bg-black cursor-pointer transition-all duration-500 ease-in-out">
+                <Link href={'/add-project'} className="uppercase mt-8 bg-[#674DF0] px-9 py-5 text-white hover:bg-black cursor-pointer transition-all duration-500 ease-in-out">
                   Start A Project
-                </button>
+                </Link>
               </motion.div>
             </AnimatePresence>
           </div>
