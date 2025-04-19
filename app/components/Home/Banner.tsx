@@ -5,6 +5,7 @@ import { Parallax } from 'react-parallax'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const animationVariants = [
   {
@@ -103,22 +104,23 @@ const Banner = () => {
   return (
     <div className="mt-[90px] relative">
       {loading ? (
-        <motion.div
-          className="w-full h-[560px] bg-gray-300 animate-pulse flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <motion.div
-            className="w-[100px] h-[100px] bg-gray-400 rounded-full"
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          />
-        </motion.div>
-        // <SkeletonTheme baseColor="#202020" highlightColor="#444">
-        //   <Skeleton className="h-[560px]" count={8}/>
-        // </SkeletonTheme>
+        <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
+          <div className="w-full h-[560px] flex flex-col justify-center items-center bg-white px-4">
+            {/* Background-like skeleton */}
+            <Skeleton
+              height={560}
+              width="100%"
+              style={{ position: 'absolute', top: 0, left: 0 }}
+            />
+
+            {/* Foreground content skeletons */}
+            <div className="z-10 text-center space-y-4 flex flex-col gap-4">
+              <Skeleton height={24} width={280} borderRadius={8} />
+              <Skeleton height={48} width={600} borderRadius={12} />
+              <Skeleton height={40} width={160} borderRadius={8} />
+            </div>
+          </div>
+        </SkeletonTheme>
       ) : (
         <Parallax strength={300}>
           <AnimatePresence mode="wait">
