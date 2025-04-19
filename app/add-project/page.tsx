@@ -113,7 +113,7 @@ const AddProject = () => {
       </div>
 
       <div className="flex flex-col bg-[#F7F7F9] px-5 md:px-10 xl:px-28 py-20">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-10 w-full">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-10">
           {/* Application Type */}
           <div className="flex flex-col gap-2">
             <label htmlFor="applicationType" className="font-semibold">
