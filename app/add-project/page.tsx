@@ -113,7 +113,7 @@ const AddProject = () => {
       </div>
 
       <div className="flex flex-col bg-[#F7F7F9] px-5 md:px-10 xl:px-28 py-20">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-10">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-10 w-full">
           {/* Application Type */}
           <div className="flex flex-col gap-2">
             <label htmlFor="applicationType" className="font-semibold">
@@ -134,7 +134,7 @@ const AddProject = () => {
           </div>
 
           {/* Common Info */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 w-full">
             <input
               type="text"
               name="fullName"
@@ -142,7 +142,7 @@ const AddProject = () => {
               value={formData.fullName}
               onChange={handleChange}
               required
-              className="p-4 border border-gray-300 rounded-md bg-white"
+              className="p-4 border border-gray-300 rounded-md bg-white focus:outline-none"
             />
             <input
               type="email"
@@ -151,7 +151,7 @@ const AddProject = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="p-4 border border-gray-300 rounded-md bg-white"
+              className="p-4 border border-gray-300 rounded-md bg-white focus:outline-none"
             />
             <input
               type="tel"
@@ -160,7 +160,7 @@ const AddProject = () => {
               value={formData.phoneNumber}
               onChange={handleChange}
               required
-              className="p-4 border border-gray-300 rounded-md bg-white"
+              className="p-4 border border-gray-300 rounded-md bg-white focus:outline-none"
             />
           </div>
 
@@ -243,7 +243,7 @@ const AddProject = () => {
           )}
 
           {/* Common Fields for Both */}
-          
+
           {/* Funds */}
           <div className="flex flex-col gap-2">
             <label htmlFor="fundsToRaise" className="font-semibold">
