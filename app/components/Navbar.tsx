@@ -33,9 +33,11 @@ const Navbar = () => {
           Projects
         </Link>
       </div>
-      <button className="bg-[#674DF0] lg:px-7 px-3 lg:py-[0.6rem] py-[0.4rem] text-white rounded-md text-[14px] lg:font-semibold">
+      <div>
+      <Link href={'/donate'} className="bg-[#674DF0] lg:px-7 px-3 lg:py-[0.6rem] py-[0.4rem] text-white rounded-md text-[14px] lg:font-semibold cursor-pointer">
         Donate Now
-      </button>
+      </Link>
+      </div>
     </div>
   )
 }

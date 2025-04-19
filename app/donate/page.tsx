@@ -1,8 +1,8 @@
 'use client'
-import YourDonation from '../../components/YourDonation'
-import BillingSection from '../../components/BillingSection'
+import BillingSection from '../projects/components/BillingSection'
+import DonateSection from './components/DonateSection'
 
-const DonatePage = () => {
+const Donate = () => {
 
   return (
     <div className="flex flex-col mt-[90px]">
@@ -18,10 +18,10 @@ const DonatePage = () => {
       </div>
       <form className="flex lg:flex-row flex-col gap-8 lg:gap-8 mt-24 px-5 md:px-10 xl:px-24 justify-between mb-10">
         <BillingSection />
-        <YourDonation />
+        <DonateSection />
       </form>
     </div>
   )
 }
 
-export default DonatePage
+export default Donate
