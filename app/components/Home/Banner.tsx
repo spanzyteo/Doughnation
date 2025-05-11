@@ -84,7 +84,7 @@ const Banner = () => {
 
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 8000) // 8 seconds loading
+    }, 5000) // 8 seconds loading
 
     return () => clearTimeout(timer)
   }, [])
@@ -105,19 +105,31 @@ const Banner = () => {
     <div className="mt-[90px] relative">
       {loading ? (
         <SkeletonTheme baseColor="#e0e0e0" highlightColor="#f5f5f5">
-          <div className="w-full h-[560px] flex flex-col justify-center items-center bg-white px-4">
+          <div className="w-full h-[560px] flex flex-col justify-center items-center bg-white px-4 relative overflow-hidden">
             {/* Background-like skeleton */}
             <Skeleton
               height={560}
               width="100%"
-              style={{ position: 'absolute', top: 0, left: 0 }}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                maxWidth: '100%',
+              }}
             />
 
             {/* Foreground content skeletons */}
-            <div className="z-10 text-center space-y-4 flex flex-col gap-4">
-              <Skeleton height={24} width={280} borderRadius={8} />
-              <Skeleton height={48} width={600} borderRadius={12} />
-              <Skeleton height={40} width={160} borderRadius={8} />
+            <div className="z-10 text-center space-y-4 flex flex-col gap-4 w-full items-center px-4">
+              <div className="w-full max-w-xs">
+                <Skeleton height={24} borderRadius={8} />
+              </div>
+              <div className="w-full max-w-xl">
+                <Skeleton height={48} borderRadius={12} />
+              </div>
+              <div className="w-full max-w-[160px]">
+                <Skeleton height={40} borderRadius={8} />
+              </div>
             </div>
           </div>
         </SkeletonTheme>
